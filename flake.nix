@@ -26,7 +26,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:acmsl-def/licdata-artifact-events/0.0.7";
+      url = "github:acmsl-def/licdata-artifact-events/0.0.8";
     };
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
     nixos.url = "github:NixOS/nixpkgs/24.05";
@@ -37,7 +37,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-iac-def/events/0.0.6";
+      url = "github:pythoneda-shared-iac-def/events/0.0.7";
     };
     pythoneda-shared-pythonlang-banner = {
       inputs.nixos.follows = "nixos";
@@ -49,7 +49,7 @@
       inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
-      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.88";
+      url = "github:pythoneda-shared-pythonlang-def/domain/0.0.89";
     };
     pythoneda-shared-pythonlang-application = {
       inputs.flake-utils.follows = "flake-utils";
@@ -58,9 +58,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      inputs.pythoneda-shared-pythonlang-infrastructure.follows =
-        "pythoneda-shared-pythonlang-infrastructure";
-      url = "github:pythoneda-shared-pythonlang-def/application/0.0.85";
+      url = "github:pythoneda-shared-pythonlang-def/application/0.0.86";
     };
   };
   outputs = inputs:
@@ -327,16 +325,12 @@
               python = pkgs.python38;
               pythoneda-shared-iac-events =
                 pythoneda-shared-iac-events.packages.${system}.pythoneda-shared-iac-events-python38;
-              pythoneda-shared-iac-pulumi-azure =
-                pythoneda-shared-iac-pulumi-azure.packages.${system}.pythoneda-shared-iac-pulumi-azure-python38;
               pythoneda-iac-shared =
                 pythoneda-iac-shared.packages.${system}.pythoneda-iac-shared-python38;
               pythoneda-shared-pythonlang-banner =
                 pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python38;
               pythoneda-shared-pythonlang-domain =
                 pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python38;
-              pythoneda-shared-pythonlang-infrastructure =
-                pythoneda-shared-pythonlang-infrastructure.packages.${system}.pythoneda-shared-pythonlang-infrastructure-python38;
               pythoneda-shared-pythonlang-application =
                 pythoneda-shared-pythonlang-application.packages.${system}.pythoneda-shared-pythonlang-application-python38;
             };
