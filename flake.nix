@@ -188,7 +188,7 @@
                 --replace "@CUSTOM_CONTENT@" "" \
                 --replace "@PYTHONEDA_SHARED_PYTHONLANG_DOMAIN@" "${pythoneda-shared-pythonlang-domain}" \
                 --replace "@PACKAGE@" "$out/lib/python${pythonMajorMinorVersion}/site-packages" \
-                --replace "@ENTRYPOINT@" "$out/lib/python${pythonMajorMinorVersion}/site-packages/${package}/application/${entrypoint}.py" \
+                --replace "@ENTRYPOINT@" "$out/lib/python${pythonMajorMinorVersion}/site-packages/${package}/${entrypoint}.py" \
                 --replace "@PYTHON_ARGS@" "" \
                 --replace "@BANNER@" "$out/bin/banner.sh"
             '';
