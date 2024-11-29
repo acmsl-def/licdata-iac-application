@@ -17,7 +17,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 {
-  description = "Nix flake for acmsl/licdata-iac-applicatio";
+  description = "Nix flake for acmsl/licdata-iac-application";
   inputs = rec {
     acmsl-licdata-artifact-events = {
       inputs.nixos.follows = "nixos";
@@ -220,12 +220,7 @@
           };
       in rec {
         apps = rec {
-          default = acmsl-licdata-iac-application-python311;
-          acmsl-licdata-iac-application-python38 = shared.app-for {
-            package =
-              self.packages.${system}.acmsl-licdata-iac-application-python38;
-            inherit entrypoint;
-          };
+          default = acmsl-licdata-iac-application-python312;
           acmsl-licdata-iac-application-python39 = shared.app-for {
             package =
               self.packages.${system}.acmsl-licdata-iac-application-python39;
@@ -246,24 +241,16 @@
               self.packages.${system}.acmsl-licdata-iac-application-python312;
             inherit entrypoint;
           };
+          acmsl-licdata-iac-application-python313 = shared.app-for {
+            package =
+              self.packages.${system}.acmsl-licdata-iac-application-python313;
+            inherit entrypoint;
+          };
         };
         defaultApp = apps.default;
         defaultPackage = packages.default;
         devShells = rec {
-          default = acmsl-licdata-iac-application-python311;
-          acmsl-licdata-iac-application-python38 =
-            shared.devShell-for {
-              banner = "${packages.acmsl-licdata-iac-application-python38}/bin/banner.sh";
-              extra-namespaces = "org";
-              nixpkgs-release = nixpkgsRelease;
-              package = packages.acmsl-licdata-iac-application-python38;
-              python = pkgs.python38;
-              pythoneda-shared-pythonlang-banner =
-                pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python38;
-              pythoneda-shared-pythonlang-domain =
-                pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python38;
-              inherit archRole layer org pkgs repo space;
-            };
+          default = acmsl-licdata-iac-application-python312;
           acmsl-licdata-iac-application-python39 =
             shared.devShell-for {
               banner = "${packages.acmsl-licdata-iac-application-python39}/bin/banner.sh";
@@ -316,24 +303,22 @@
                 pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python312;
               inherit archRole layer org pkgs repo space;
             };
+          acmsl-licdata-iac-application-python313 =
+            shared.devShell-for {
+              banner = "${packages.acmsl-licdata-iac-application-python313}/bin/banner.sh";
+              extra-namespaces = "org";
+              nixpkgs-release = nixpkgsRelease;
+              package = packages.acmsl-licdata-iac-application-python313;
+              python = pkgs.python313;
+              pythoneda-shared-pythonlang-banner =
+                pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python313;
+              pythoneda-shared-pythonlang-domain =
+                pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python313;
+              inherit archRole layer org pkgs repo space;
+            };
         };
         packages = rec {
-          default = acmsl-licdata-iac-application-python311;
-          acmsl-licdata-iac-application-python38 =
-            pythoneda-acmsl-licdata-application-for {
-              acmsl-licdata-artifact-events = acmsl-licdata-artifact-events.packages.${system}.acmsl-licdata-artifact-events-python38;
-              python = pkgs.python38;
-              pythoneda-shared-iac-events =
-                pythoneda-shared-iac-events.packages.${system}.pythoneda-shared-iac-events-python38;
-              pythoneda-iac-shared =
-                pythoneda-iac-shared.packages.${system}.pythoneda-iac-shared-python38;
-              pythoneda-shared-pythonlang-banner =
-                pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python38;
-              pythoneda-shared-pythonlang-domain =
-                pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python38;
-              pythoneda-shared-pythonlang-application =
-                pythoneda-shared-pythonlang-application.packages.${system}.pythoneda-shared-pythonlang-application-python38;
-            };
+          default = acmsl-licdata-iac-application-python312;
           acmsl-licdata-iac-application-python39 =
             acmsl-licdata-application-for {
               acmsl-licdata-artifact-events = acmsl-licdata-artifact-events.packages.${system}.acmsl-licdata-artifact-events-python39;
@@ -385,6 +370,21 @@
                 pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python312;
               pythoneda-shared-pythonlang-application =
                 pythoneda-shared-pythonlang-application.packages.${system}.pythoneda-shared-pythonlang-application-python312;
+            };
+          acmsl-licdata-iac-application-python313 =
+            pythoneda-acmsl-licdata-application-for {
+              acmsl-licdata-artifact-events = acmsl-licdata-artifact-events.packages.${system}.acmsl-licdata-artifact-events-python313;
+              python = pkgs.python313;
+              pythoneda-shared-iac-events =
+                pythoneda-shared-iac-events.packages.${system}.pythoneda-shared-iac-events-python313;
+              pythoneda-iac-shared =
+                pythoneda-iac-shared.packages.${system}.pythoneda-iac-shared-python313;
+              pythoneda-shared-pythonlang-banner =
+                pythoneda-shared-pythonlang-banner.packages.${system}.pythoneda-shared-pythonlang-banner-python313;
+              pythoneda-shared-pythonlang-domain =
+                pythoneda-shared-pythonlang-domain.packages.${system}.pythoneda-shared-pythonlang-domain-python313;
+              pythoneda-shared-pythonlang-application =
+                pythoneda-shared-pythonlang-application.packages.${system}.pythoneda-shared-pythonlang-application-python313;
             };
         };
       });
