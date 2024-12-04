@@ -35,7 +35,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:acmsl-def/licdata-iac-domain/0.0.17";
+      url = "github:acmsl-def/licdata-iac-domain/0.0.18";
     };
     acmsl-licdata-iac-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
@@ -45,7 +45,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:acmsl-def/licdata-iac-infrastructure/0.0.7";
+      url = "github:acmsl-def/licdata-iac-infrastructure/0.0.8";
     };
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
     nixos.url = "github:NixOS/nixpkgs/24.05";
@@ -56,7 +56,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-artifact-def/infrastructure/0.0.69";
+      url = "github:pythoneda-shared-artifact-def/infrastructure/0.0.70";
     };
     pythoneda-shared-iac-events = {
       inputs.flake-utils.follows = "flake-utils";
@@ -86,7 +86,7 @@
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:pythoneda-shared-pythonlang-def/application/0.0.90";
+      url = "github:pythoneda-shared-pythonlang-def/application/0.0.91";
     };
   };
   outputs = inputs:
@@ -95,8 +95,8 @@
       let
         org = "acmsl";
         repo = "licdata-iac-application";
-        version = "0.0.4";
-        sha256 = "0iqfka71wnavcb40z31gl1xshldv4gl5q3zxn95sdvx676i4133l";
+        version = "0.0.5";
+        sha256 = "1q5y1kc9wmsx0vd01xy6mc1dl46pj7ykj9v6jw0r57k8769qhz82";
         pname = "${org}-${repo}";
         pythonpackage = "org.acmsl.iac.licdata.application";
         package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
