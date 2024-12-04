@@ -20,19 +20,47 @@
   description = "Nix flake for acmsl/licdata-iac-application";
   inputs = rec {
     acmsl-licdata-artifact-events = {
-      inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
+      inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
       url = "github:acmsl-def/licdata-artifact-events/0.0.10";
     };
+    acmsl-licdata-iac-domain = {
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.nixos.follows = "nixos";
+      inputs.pythoneda-shared-pythonlang-banner.follows =
+        "pythoneda-shared-pythonlang-banner";
+      inputs.pythoneda-shared-pythonlang-domain.follows =
+        "pythoneda-shared-pythonlang-domain";
+      url = "github:acmsl-def/licdata-iac-domain/0.0.15";
+    };
+    acmsl-licdata-iac-infrastructure = {
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.acmsl-licdata-iac-domain.follows = "acmsl-licdata-iac-domain";
+      inputs.nixos.follows = "nixos";
+      inputs.pythoneda-shared-pythonlang-banner.follows =
+        "pythoneda-shared-pythonlang-banner";
+      inputs.pythoneda-shared-pythonlang-domain.follows =
+        "pythoneda-shared-pythonlang-domain";
+      url = "github:acmsl-def/licdata-iac-infrastructure/0.0.4";
+    };
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
     nixos.url = "github:NixOS/nixpkgs/24.05";
-    pythoneda-shared-iac-events = {
-      inputs.nixos.follows = "nixos";
+    pythoneda-shared-artifact-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
+      inputs.nixos.follows = "nixos";
+      inputs.pythoneda-shared-pythonlang-banner.follows =
+        "pythoneda-shared-pythonlang-banner";
+      inputs.pythoneda-shared-pythonlang-domain.follows =
+        "pythoneda-shared-pythonlang-domain";
+      url = "github:pythoneda-shared-artifact-def/infrastructure/0.0.68";
+    };
+    pythoneda-shared-iac-events = {
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.nixos.follows = "nixos";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
@@ -40,8 +68,8 @@
       url = "github:pythoneda-shared-iac-def/events/0.0.7";
     };
     pythoneda-shared-pythonlang-banner = {
-      inputs.nixos.follows = "nixos";
       inputs.flake-utils.follows = "flake-utils";
+      inputs.nixos.follows = "nixos";
       url = "github:pythoneda-shared-pythonlang-def/banner/0.0.71";
     };
     pythoneda-shared-pythonlang-domain = {
@@ -86,8 +114,12 @@
           builtins.replaceStrings [ "\n" ] [ "" ] "nixos-${nixosVersion}";
         shared = import "${pythoneda-shared-pythonlang-banner}/nix/shared.nix";
         acmsl-licdata-application-for = {
-          acmsl-licdata-artifact-events,
-          python, pythoneda-shared-iac-events, pythoneda-shared-pythonlang-banner
+            acmsl-licdata-artifact-events
+          , acmsl-licdata-iac-domain
+          , acmsl-licdata-iac-infrastructure
+          , python
+          , pythoneda-shared-artifact-infrastructure
+          , pythoneda-shared-iac-events, pythoneda-shared-pythonlang-banner
           , pythoneda-shared-pythonlang-domain
           , pythoneda-shared-pythonlang-application }:
           let
@@ -114,6 +146,9 @@
               package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
               acmslLicdataArtifactEvents =
                 acmsl-licdata-artifact-events.version;
+              acmslLicdataIacDomain = acmsl-licdata-iac-domain.version;
+              acmslLicdataIacInfrastructure = acmsl-licdata-iac-infrastructure.version;
+              pythonedaSharedArtifactInfrastructure = pythoneda-shared-artifact-infrastructure.version;
               pythonedaSharedIacEvents = pythoneda-shared-iac-events.version;
               pythonedaSharedPythonlangBanner =
                 pythoneda-shared-pythonlang-banner.version;
@@ -160,9 +195,12 @@
 
             format = "pyproject";
 
-            nativeBuildInputs = [ python.pkgs.pip python.pkgs.poetry-core pkgs.docker ];
+            nativeBuildInputs = with python.pkgs; [ pip poetry-core ];
             propagatedBuildInputs = with python.pkgs; [
               acmsl-licdata-artifact-events
+              acmsl-licdata-iac-domain
+              acmsl-licdata-iac-infrastructure
+              pythoneda-shared-artifact-infrastructure
               pythoneda-shared-iac-events
               pythoneda-shared-pythonlang-banner
               pythoneda-shared-pythonlang-domain
@@ -220,7 +258,7 @@
           };
       in rec {
         apps = rec {
-          default = acmsl-licdata-iac-application-python312;
+          default = acmsl-licdata-iac-application-python311;
           acmsl-licdata-iac-application-python39 = shared.app-for {
             package =
               self.packages.${system}.acmsl-licdata-iac-application-python39;
@@ -250,7 +288,7 @@
         defaultApp = apps.default;
         defaultPackage = packages.default;
         devShells = rec {
-          default = acmsl-licdata-iac-application-python312;
+          default = acmsl-licdata-iac-application-python311;
           acmsl-licdata-iac-application-python39 =
             shared.devShell-for {
               banner = "${packages.acmsl-licdata-iac-application-python39}/bin/banner.sh";
@@ -318,11 +356,14 @@
             };
         };
         packages = rec {
-          default = acmsl-licdata-iac-application-python312;
+          default = acmsl-licdata-iac-application-python311;
           acmsl-licdata-iac-application-python39 =
             acmsl-licdata-application-for {
               acmsl-licdata-artifact-events = acmsl-licdata-artifact-events.packages.${system}.acmsl-licdata-artifact-events-python39;
+              acmsl-licdata-iac-domain = acmsl-licdata-iac-domain.packages.${system}.acmsl-licdata-iac-domain-python39;
+              acmsl-licdata-iac-infrastructure = acmsl-licdata-iac-infrastructure.packages.${system}.acmsl-licdata-iac-infrastructure-python39;
               python = pkgs.python39;
+              pythoneda-shared-artifact-infrastructure = pythoneda-shared-artifact-infrastructure.packages.${system}.pythoneda-shared-artifact-infrastructure-python39;
               pythoneda-shared-iac-events =
                 pythoneda-shared-iac-events.packages.${system}.pythoneda-shared-iac-events-python39;
               pythoneda-shared-pythonlang-banner =
@@ -335,7 +376,10 @@
           acmsl-licdata-iac-application-python310 =
             acmsl-licdata-application-for {
               acmsl-licdata-artifact-events = acmsl-licdata-artifact-events.packages.${system}.acmsl-licdata-artifact-events-python310;
+              acmsl-licdata-iac-domain = acmsl-licdata-iac-domain.packages.${system}.acmsl-licdata-iac-domain-python310;
+              acmsl-licdata-iac-infrastructure = acmsl-licdata-iac-infrastructure.packages.${system}.acmsl-licdata-iac-infrastructure-python310;
               python = pkgs.python310;
+              pythoneda-shared-artifact-infrastructure = pythoneda-shared-artifact-infrastructure.packages.${system}.pythoneda-shared-artifact-infrastructure-python310;
               pythoneda-shared-iac-events =
                 pythoneda-shared-iac-events.packages.${system}.pythoneda-shared-iac-events-python310;
               pythoneda-shared-pythonlang-banner =
@@ -348,7 +392,10 @@
           acmsl-licdata-iac-application-python311 =
             acmsl-licdata-application-for {
               acmsl-licdata-artifact-events = acmsl-licdata-artifact-events.packages.${system}.acmsl-licdata-artifact-events-python311;
+              acmsl-licdata-iac-domain = acmsl-licdata-iac-domain.packages.${system}.acmsl-licdata-iac-domain-python311;
+              acmsl-licdata-iac-infrastructure = acmsl-licdata-iac-infrastructure.packages.${system}.acmsl-licdata-iac-infrastructure-python311;
               python = pkgs.python311;
+              pythoneda-shared-artifact-infrastructure = pythoneda-shared-artifact-infrastructure.packages.${system}.pythoneda-shared-artifact-infrastructure-python311;
               pythoneda-shared-iac-events =
                 pythoneda-shared-iac-events.packages.${system}.pythoneda-shared-iac-events-python311;
               pythoneda-shared-pythonlang-banner =
@@ -361,7 +408,10 @@
           acmsl-licdata-iac-application-python312 =
             acmsl-licdata-application-for {
               acmsl-licdata-artifact-events = acmsl-licdata-artifact-events.packages.${system}.acmsl-licdata-artifact-events-python312;
+              acmsl-licdata-iac-domain = acmsl-licdata-iac-domain.packages.${system}.acmsl-licdata-iac-domain-python312;
+              acmsl-licdata-iac-infrastructure = acmsl-licdata-iac-infrastructure.packages.${system}.acmsl-licdata-iac-infrastructure-python312;
               python = pkgs.python312;
+              pythoneda-shared-artifact-infrastructure = pythoneda-shared-artifact-infrastructure.packages.${system}.pythoneda-shared-artifact-infrastructure-python312;
               pythoneda-shared-iac-events =
                 pythoneda-shared-iac-events.packages.${system}.pythoneda-shared-iac-events-python312;
               pythoneda-shared-pythonlang-banner =
@@ -374,7 +424,10 @@
           acmsl-licdata-iac-application-python313 =
             pythoneda-acmsl-licdata-application-for {
               acmsl-licdata-artifact-events = acmsl-licdata-artifact-events.packages.${system}.acmsl-licdata-artifact-events-python313;
+              acmsl-licdata-iac-domain = acmsl-licdata-iac-domain.packages.${system}.acmsl-licdata-iac-domain-python313;
+              acmsl-licdata-iac-infrastructure = acmsl-licdata-iac-infrastructure.packages.${system}.acmsl-licdata-iac-infrastructure-python313;
               python = pkgs.python313;
+              pythoneda-shared-artifact-infrastructure = pythoneda-shared-artifact-infrastructure.packages.${system}.pythoneda-shared-artifact-infrastructure-python313;
               pythoneda-shared-iac-events =
                 pythoneda-shared-iac-events.packages.${system}.pythoneda-shared-iac-events-python313;
               pythoneda-iac-shared =
