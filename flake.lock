@@ -157,16 +157,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1733319846,
-        "narHash": "sha256-JgQ/EhFOUG61zA8kGaWH67eyxv0AZvJ9g7DyVl7B4m0=",
+        "lastModified": 1733336424,
+        "narHash": "sha256-CIXYCREY6R1V/cvGt2Mi4UCe3DrONO75w+PY/x4ohQA=",
         "owner": "acmsl-def",
         "repo": "licdata-iac-domain",
-        "rev": "eb623794201e8ad3bdf242536590f3f15ce324cd",
+        "rev": "9b147d2212438aac4a588134a819f5bbfcd58295",
         "type": "github"
       },
       "original": {
         "owner": "acmsl-def",
-        "ref": "0.0.16",
+        "ref": "0.0.17",
         "repo": "licdata-iac-domain",
         "type": "github"
       }
@@ -196,16 +196,16 @@
         "pythoneda-shared-pythonlang-infrastructure": "pythoneda-shared-pythonlang-infrastructure_2"
       },
       "locked": {
-        "lastModified": 1733319973,
-        "narHash": "sha256-T0/5o2i+neXPtpLv1pjVC2lRtzLbEFyWlpFSNzprYbM=",
+        "lastModified": 1733336613,
+        "narHash": "sha256-NTEyKsD6xpDyqs/vn+ShkE52Zh6DcXyy4yGyEaJlXhI=",
         "owner": "acmsl-def",
         "repo": "licdata-iac-infrastructure",
-        "rev": "37941d3e8f235c53d55420d21acf296cb73eb19f",
+        "rev": "09d814cc3085e1a5ed2a1036b8a23c574a5ff39e",
         "type": "github"
       },
       "original": {
         "owner": "acmsl-def",
-        "ref": "0.0.5",
+        "ref": "0.0.7",
         "repo": "licdata-iac-infrastructure",
         "type": "github"
       }
