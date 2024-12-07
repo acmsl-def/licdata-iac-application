@@ -21,37 +21,37 @@
   inputs = rec {
     acmsl-licdata-artifact-events = {
       inputs.flake-utils.follows = "flake-utils";
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:acmsl-def/licdata-artifact-events/0.0.13";
+      url = "github:acmsl-def/licdata-artifact-events/0.0.14";
     };
     acmsl-licdata-iac-domain = {
       inputs.flake-utils.follows = "flake-utils";
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:acmsl-def/licdata-iac-domain/0.0.20";
+      url = "github:acmsl-def/licdata-iac-domain/0.0.21";
     };
     acmsl-licdata-iac-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
       inputs.acmsl-licdata-iac-domain.follows = "acmsl-licdata-iac-domain";
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
         "pythoneda-shared-pythonlang-domain";
-      url = "github:acmsl-def/licdata-iac-infrastructure/0.0.10";
+      url = "github:acmsl-def/licdata-iac-infrastructure/0.0.11";
     };
     flake-utils.url = "github:numtide/flake-utils/v1.0.0";
-    nixos.url = "github:NixOS/nixpkgs/24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/24.05";
     pythoneda-shared-artifact-infrastructure = {
       inputs.flake-utils.follows = "flake-utils";
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
@@ -60,7 +60,7 @@
     };
     pythoneda-shared-iac-events = {
       inputs.flake-utils.follows = "flake-utils";
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
@@ -69,19 +69,19 @@
     };
     pythoneda-shared-pythonlang-banner = {
       inputs.flake-utils.follows = "flake-utils";
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       url = "github:pythoneda-shared-pythonlang-def/banner/0.0.72";
     };
     pythoneda-shared-pythonlang-domain = {
       inputs.flake-utils.follows = "flake-utils";
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
       url = "github:pythoneda-shared-pythonlang-def/domain/0.0.94";
     };
     pythoneda-shared-pythonlang-application = {
       inputs.flake-utils.follows = "flake-utils";
-      inputs.nixos.follows = "nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.pythoneda-shared-pythonlang-banner.follows =
         "pythoneda-shared-pythonlang-banner";
       inputs.pythoneda-shared-pythonlang-domain.follows =
@@ -100,7 +100,7 @@
         pname = "${org}-${repo}";
         pythonpackage = "org.acmsl.iac.licdata.application";
         package = builtins.replaceStrings [ "." ] [ "/" ] pythonpackage;
-        pkgs = import nixos { inherit system; };
+        pkgs = import nixpkgs { inherit system; };
         description = "Licdata IaC";
         entrypoint = "licdata_iac_app";
         license = pkgs.lib.licenses.gpl3;
@@ -109,9 +109,9 @@
         archRole = "B";
         space = "I";
         layer = "A";
-        nixosVersion = builtins.readFile "${nixos}/.version";
+        nixpkgsVersion = builtins.readFile "${nixpkgs}/.version";
         nixpkgsRelease =
-          builtins.replaceStrings [ "\n" ] [ "" ] "nixos-${nixosVersion}";
+          builtins.replaceStrings [ "\n" ] [ "" ] "nixpkgs-${nixpkgsVersion}";
         shared = import "${pythoneda-shared-pythonlang-banner}/nix/shared.nix";
         acmsl-licdata-application-for = {
             acmsl-licdata-artifact-events

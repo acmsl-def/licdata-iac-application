@@ -5,8 +5,8 @@
         "flake-utils": [
           "flake-utils"
         ],
-        "nixos": [
-          "nixos"
+        "nixpkgs": [
+          "nixpkgs"
         ],
         "pythoneda-shared-pythonlang-banner": [
           "pythoneda-shared-pythonlang-banner"
@@ -16,16 +16,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1733496842,
-        "narHash": "sha256-vr4vZq5xO3hnue02cgapDtfH3A+VYP0qewCU91bqzjA=",
+        "lastModified": 1733600671,
+        "narHash": "sha256-uX8NiTpxrNVtOOOYHAVWUxM+2SAkGCz1ljl+k6gqZz0=",
         "owner": "acmsl-def",
         "repo": "licdata-artifact-events",
-        "rev": "f515bc6ad78ccb000dee9f8314bfd52ae403afcb",
+        "rev": "3f85ab3dc5813677bde1a9f36a61fddd0025b438",
         "type": "github"
       },
       "original": {
         "owner": "acmsl-def",
-        "ref": "0.0.13",
+        "ref": "0.0.14",
         "repo": "licdata-artifact-events",
         "type": "github"
       }
@@ -40,9 +40,9 @@
           "acmsl-licdata-iac-infrastructure",
           "flake-utils"
         ],
-        "nixos": [
+        "nixpkgs": [
           "acmsl-licdata-iac-infrastructure",
-          "nixos"
+          "nixpkgs"
         ],
         "pythoneda-shared-pythonlang-banner": [
           "acmsl-licdata-iac-infrastructure",
@@ -55,16 +55,16 @@
         "pythoneda-shared-pythonlang-infrastructure": "pythoneda-shared-pythonlang-infrastructure"
       },
       "locked": {
-        "lastModified": 1733496933,
-        "narHash": "sha256-dc7oM0qDBkBnK2s2HtLxc1KLP1VaJ1GTM5x1FLgkNO8=",
+        "lastModified": 1733600746,
+        "narHash": "sha256-sRDd90Y8M4OmFrRDF/L8EvLHx8v9iTPjAB58xHx1J/c=",
         "owner": "acmsl-def",
         "repo": "licdata-artifact-events-infrastructure",
-        "rev": "5982d1c929bea5e50565cf945a4dabfc17fb2743",
+        "rev": "faaaafb8d56222dad52bf3ae6e24f8c71dbcc240",
         "type": "github"
       },
       "original": {
         "owner": "acmsl-def",
-        "ref": "0.0.15",
+        "ref": "0.0.16",
         "repo": "licdata-artifact-events-infrastructure",
         "type": "github"
       }
@@ -75,9 +75,9 @@
           "acmsl-licdata-iac-domain",
           "flake-utils"
         ],
-        "nixos": [
+        "nixpkgs": [
           "acmsl-licdata-iac-domain",
-          "nixos"
+          "nixpkgs"
         ],
         "pythoneda-shared-pythonlang-banner": [
           "acmsl-licdata-iac-domain",
@@ -89,16 +89,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1733496842,
-        "narHash": "sha256-vr4vZq5xO3hnue02cgapDtfH3A+VYP0qewCU91bqzjA=",
+        "lastModified": 1733600671,
+        "narHash": "sha256-uX8NiTpxrNVtOOOYHAVWUxM+2SAkGCz1ljl+k6gqZz0=",
         "owner": "acmsl-def",
         "repo": "licdata-artifact-events",
-        "rev": "f515bc6ad78ccb000dee9f8314bfd52ae403afcb",
+        "rev": "3f85ab3dc5813677bde1a9f36a61fddd0025b438",
         "type": "github"
       },
       "original": {
         "owner": "acmsl-def",
-        "ref": "0.0.13",
+        "ref": "0.0.14",
         "repo": "licdata-artifact-events",
         "type": "github"
       }
@@ -109,9 +109,9 @@
           "acmsl-licdata-iac-infrastructure",
           "flake-utils"
         ],
-        "nixos": [
+        "nixpkgs": [
           "acmsl-licdata-iac-infrastructure",
-          "nixos"
+          "nixpkgs"
         ],
         "pythoneda-shared-pythonlang-banner": [
           "acmsl-licdata-iac-infrastructure",
@@ -123,16 +123,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1733496842,
-        "narHash": "sha256-vr4vZq5xO3hnue02cgapDtfH3A+VYP0qewCU91bqzjA=",
+        "lastModified": 1733600671,
+        "narHash": "sha256-uX8NiTpxrNVtOOOYHAVWUxM+2SAkGCz1ljl+k6gqZz0=",
         "owner": "acmsl-def",
         "repo": "licdata-artifact-events",
-        "rev": "f515bc6ad78ccb000dee9f8314bfd52ae403afcb",
+        "rev": "3f85ab3dc5813677bde1a9f36a61fddd0025b438",
         "type": "github"
       },
       "original": {
         "owner": "acmsl-def",
-        "ref": "0.0.13",
+        "ref": "0.0.14",
         "repo": "licdata-artifact-events",
         "type": "github"
       }
@@ -143,8 +143,8 @@
         "flake-utils": [
           "flake-utils"
         ],
-        "nixos": [
-          "nixos"
+        "nixpkgs": [
+          "nixpkgs"
         ],
         "pythoneda-shared-iac-events": "pythoneda-shared-iac-events",
         "pythoneda-shared-iac-pulumi-azure": "pythoneda-shared-iac-pulumi-azure",
@@ -157,16 +157,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1733582400,
-        "narHash": "sha256-H8K0GmHZozjr5ZS9XFPBvuLvjHPsGCKL/w5dfADiYcQ=",
+        "lastModified": 1733604302,
+        "narHash": "sha256-pfx4gXpPRYd8YnoNVY/0biQzJ3nWonf85mK4K1aqBTc=",
         "owner": "acmsl-def",
         "repo": "licdata-iac-domain",
-        "rev": "e748ab51c768caf05715eaa08f3f72008d2f1c33",
+        "rev": "42933c30c1a6831d3fb2a9016acfb1202859c46b",
         "type": "github"
       },
       "original": {
         "owner": "acmsl-def",
-        "ref": "0.0.20",
+        "ref": "0.0.21",
         "repo": "licdata-iac-domain",
         "type": "github"
       }
@@ -181,8 +181,8 @@
         "flake-utils": [
           "flake-utils"
         ],
-        "nixos": [
-          "nixos"
+        "nixpkgs": [
+          "nixpkgs"
         ],
         "pythoneda-shared-iac-events": "pythoneda-shared-iac-events_3",
         "pythoneda-shared-iac-pulumi-azure": "pythoneda-shared-iac-pulumi-azure_2",
@@ -196,16 +196,16 @@
         "pythoneda-shared-pythonlang-infrastructure": "pythoneda-shared-pythonlang-infrastructure_2"
       },
       "locked": {
-        "lastModified": 1733582531,
-        "narHash": "sha256-fNZ2JKfYQy1ZIPODgAtup2Ehii8OkjPf1+BGvSvxirs=",
+        "lastModified": 1733604416,
+        "narHash": "sha256-wem3k/JCLMjhAD2XyTTa0b/7zHDx1beNSXzKGHU9hQk=",
         "owner": "acmsl-def",
         "repo": "licdata-iac-infrastructure",
-        "rev": "7272a5bcade9f3146a10f147bdbef0de2551ba67",
+        "rev": "9a6fa500cd21bf4810a0aece9884f8b2f9569404",
         "type": "github"
       },
       "original": {
         "owner": "acmsl-def",
-        "ref": "0.0.10",
+        "ref": "0.0.11",
         "repo": "licdata-iac-infrastructure",
         "type": "github"
       }
@@ -270,7 +270,7 @@
           "pythoneda-shared-pythonlang-infrastructure",
           "flake-utils"
         ],
-        "nixos": "nixos_4"
+        "nixos": "nixos_3"
       },
       "locked": {
         "dir": "esdbclient",
@@ -296,7 +296,7 @@
           "pythoneda-shared-pythonlang-infrastructure",
           "flake-utils"
         ],
-        "nixos": "nixos_5"
+        "nixos": "nixos_4"
       },
       "locked": {
         "dir": "esdbclient",
@@ -395,215 +395,7 @@
         "type": "github"
       }
     },
-    "nixos_5": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_10": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_11": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_12": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_13": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_4": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_5": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_6": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_7": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_8": {
-      "locked": {
-        "lastModified": 1717179513,
-        "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "63dacb46bf939521bdc93981b4cbb7ecb58427a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "24.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_9": {
       "locked": {
         "lastModified": 1717179513,
         "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
@@ -738,7 +530,9 @@
         "flake-utils": [
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs_9",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "pythoneda-shared-artifact-events": "pythoneda-shared-artifact-events",
         "pythoneda-shared-artifact-events-infrastructure": "pythoneda-shared-artifact-events-infrastructure",
         "pythoneda-shared-artifact-shared": "pythoneda-shared-artifact-shared",
@@ -1012,7 +806,10 @@
           "acmsl-licdata-iac-domain",
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": [
+          "acmsl-licdata-iac-domain",
+          "nixpkgs"
+        ],
         "pythoneda-shared-pythonlang-banner": [
           "acmsl-licdata-iac-domain",
           "pythoneda-shared-pythonlang-banner"
@@ -1081,7 +878,10 @@
           "acmsl-licdata-iac-infrastructure",
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs_5",
+        "nixpkgs": [
+          "acmsl-licdata-iac-infrastructure",
+          "nixpkgs"
+        ],
         "pythoneda-shared-pythonlang-banner": [
           "acmsl-licdata-iac-infrastructure",
           "pythoneda-shared-pythonlang-banner"
@@ -1149,7 +949,9 @@
         "flake-utils": [
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs_10",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "pythoneda-shared-pythonlang-banner": [
           "pythoneda-shared-pythonlang-banner"
         ],
@@ -1178,7 +980,10 @@
           "acmsl-licdata-iac-domain",
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": [
+          "acmsl-licdata-iac-domain",
+          "nixpkgs"
+        ],
         "pythoneda-shared-iac-events": [
           "acmsl-licdata-iac-domain",
           "pythoneda-shared-iac-events"
@@ -1217,7 +1022,10 @@
           "acmsl-licdata-iac-infrastructure",
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs_6",
+        "nixpkgs": [
+          "acmsl-licdata-iac-infrastructure",
+          "nixpkgs"
+        ],
         "pythoneda-shared-iac-events": [
           "acmsl-licdata-iac-infrastructure",
           "pythoneda-shared-iac-events"
@@ -1256,7 +1064,10 @@
           "acmsl-licdata-iac-domain",
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": [
+          "acmsl-licdata-iac-domain",
+          "nixpkgs"
+        ],
         "pythoneda-shared-iac-events": "pythoneda-shared-iac-events_2",
         "pythoneda-shared-pythonlang-banner": [
           "acmsl-licdata-iac-domain",
@@ -1288,7 +1099,10 @@
           "acmsl-licdata-iac-infrastructure",
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs_7",
+        "nixpkgs": [
+          "acmsl-licdata-iac-infrastructure",
+          "nixpkgs"
+        ],
         "pythoneda-shared-iac-events": "pythoneda-shared-iac-events_4",
         "pythoneda-shared-pythonlang-banner": [
           "acmsl-licdata-iac-infrastructure",
@@ -1399,7 +1213,9 @@
         "flake-utils": [
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs_11",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "pythoneda-shared-artifact-shared": "pythoneda-shared-artifact-shared_2",
         "pythoneda-shared-pythonlang-banner": [
           "pythoneda-shared-pythonlang-banner"
@@ -1429,7 +1245,9 @@
         "flake-utils": [
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs_12"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1733487266,
@@ -1613,7 +1431,9 @@
         "flake-utils": [
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs_13",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "pythoneda-shared-pythonlang-banner": [
           "pythoneda-shared-pythonlang-banner"
         ]
@@ -1641,7 +1461,11 @@
           "acmsl-licdata-artifact-events-infrastructure",
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": [
+          "acmsl-licdata-iac-infrastructure",
+          "acmsl-licdata-artifact-events-infrastructure",
+          "nixpkgs"
+        ],
         "pythoneda-shared-pythonlang-banner": [
           "acmsl-licdata-iac-infrastructure",
           "acmsl-licdata-artifact-events-infrastructure",
@@ -1675,7 +1499,10 @@
           "acmsl-licdata-iac-infrastructure",
           "flake-utils"
         ],
-        "nixpkgs": "nixpkgs_8",
+        "nixpkgs": [
+          "acmsl-licdata-iac-infrastructure",
+          "nixpkgs"
+        ],
         "pythoneda-shared-pythonlang-banner": [
           "acmsl-licdata-iac-infrastructure",
           "pythoneda-shared-pythonlang-banner"
@@ -1930,7 +1757,7 @@
         "acmsl-licdata-iac-domain": "acmsl-licdata-iac-domain",
         "acmsl-licdata-iac-infrastructure": "acmsl-licdata-iac-infrastructure",
         "flake-utils": "flake-utils",
-        "nixos": "nixos_3",
+        "nixpkgs": "nixpkgs",
         "pythoneda-shared-artifact-infrastructure": "pythoneda-shared-artifact-infrastructure",
         "pythoneda-shared-iac-events": "pythoneda-shared-iac-events_5",
         "pythoneda-shared-pythonlang-application": "pythoneda-shared-pythonlang-application",
